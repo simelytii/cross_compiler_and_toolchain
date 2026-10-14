@@ -24,6 +24,8 @@ After building and installing the toolchain, compile the test program
 from the repository root:
 
 ```bash
+cd clean-toolchain
+
 ~/prep/task1-toolchain/x-tools/arm-unknown-linux-musleabihf/bin/arm-unknown-linux-musleabihf-gcc \
     test/hello.c -o test/hello
 ```
@@ -52,3 +54,20 @@ runtime library requirements.
   in this repository.
 - The build log is omitted because it is a large generated artifact.
 - This configuration targets C; C++ support is not enabled.
+
+## Verification Evidence
+
+The following screenshots document the successful toolchain build,
+ARM executable verification, and execution on the Teltonika RUTX08 router.
+
+### 1. Toolchain Build
+
+![Successful crosstool-NG build](screenshots/toolchain-build-success.png)
+
+### 2. ARM Executable Verification
+
+![ARM ELF executable verification](screenshots/arm-elf-verification.png)
+
+### 3. Execution on Teltonika RUTX08
+
+![Hello World program running on RUTX08](screenshots/rutx08-hello-world.png)
