@@ -24,12 +24,8 @@ After building and installing the toolchain, compile the test program
 from the repository root:
 
 ```bash
-CROSS_COMPILE="$HOME/prep/task1-toolchain/x-tools/arm-unknown-linux-musleabihf/bin/arm-unknown-linux-musleabihf-"
-
-"${CROSS_COMPILE}gcc" \
-    -Wall -Wextra -O2 \
-    clean-toolchain/test/hello.c \
-    -o clean-toolchain/test/hello
+~/prep/task1-toolchain/x-tools/arm-unknown-linux-musleabihf/bin/arm-unknown-linux-musleabihf-gcc \
+    test/hello.c -o test/hello
 ```
 
 Inspect the resulting executable:
